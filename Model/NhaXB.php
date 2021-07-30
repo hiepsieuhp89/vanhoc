@@ -9,30 +9,30 @@
 		}
 
 		function LayNhaXB(){
-			$sql = "SELECT * FROM NHAXUATBAN";
+			$sql = "SELECT * FROM nhaxuatban";
 			return $this->cn->FetchAll($sql);
 		}
 
 		function LayNhaXBTheoMa($id){
-			$sql = "SELECT * FROM NHAXUATBAN WHERE MANXB = $id";
+			$sql = "SELECT * FROM nhaxuatban WHERE MANXB = $id";
 			return $this->cn->Fetch($sql);
 		}
 
 		function ThemNhaXB($tennxb, $diachi)
 		{
-			$sql = "INSERT INTO NHAXUATBAN(TENNXB, DIACHI) VALUES('$tennxb', '$diachi')";
+			$sql = "INSERT INTO nhaxuatban(TENNXB, DIACHI) VALUES('$tennxb', '$diachi')";
 			return $this->cn->ExecuteQueryInsert($sql);
 		}
 
 		function CapNhatNhaXB($manxb, $tennxb, $diachi)
 		{
-			$sql = "UPDATE NHAXUATBAN SET TENNXB = '$tennxb', DIACHI = '$diachi' WHERE MANXB = $manxb";
+			$sql = "UPDATE nhaxuatban SET TENNXB = '$tennxb', DIACHI = '$diachi' WHERE MANXB = $manxb";
 			return $this->cn->ExecuteQuery($sql);
 		}
 
 		function XoaNhaXB($manxb)
 		{
-			$sql = "DELETE FROM NHAXUATBAN WHERE MANXB = $manxb";
+			$sql = "DELETE FROM nhaxuatban WHERE MANXB = $manxb";
 			return $this->cn->ExecuteQuery($sql);
 		}
 

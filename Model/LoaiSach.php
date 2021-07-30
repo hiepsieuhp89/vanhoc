@@ -20,25 +20,25 @@
 
 		function LayLoaiSachTheoDanhMuc($madms)
 		{
-			$sql = "SELECT * FROM LOAISACH WHERE MALOAI IN (SELECT MALOAI FROM SACH WHERE MADMS = $madms)";
+			$sql = "SELECT * FROM loaisach WHERE MALOAI IN (SELECT MALOAI FROM sach WHERE MADMS = $madms)";
 			return $this->cn->FetchAll($sql);
 		}
 
 		function ThemLoaiSach($tenloai)
 		{
-			$sql = "INSERT INTO LOAISACH(TENLOAI) VALUES('$tenloai')";
+			$sql = "INSERT INTO loaisach(TENLOAI) VALUES('$tenloai')";
 			return $this->cn->ExecuteQueryInsert($sql);
 		}
 
 		function CapNhatLoaiSach($maloai, $tenloai)
 		{
-			$sql = "UPDATE LOAISACH SET TENLOAI = '$tenloai' WHERE MALOAI = $maloai";
+			$sql = "UPDATE loaisach SET TENLOAI = '$tenloai' WHERE MALOAI = $maloai";
 			return $this->cn->ExecuteQuery($sql);
 		}
 
 		function XoaLoaiSach($maloai)
 		{
-			$sql = "DELETE FROM LOAISACH WHERE MALOAI = $maloai";
+			$sql = "DELETE FROM loaisach WHERE MALOAI = $maloai";
 			return $this->cn->ExecuteQuery($sql);
 		}
 

@@ -20,19 +20,19 @@
 
 		function ThemDanhMuc($tendms)
 		{
-			$sql = "INSERT INTO DANHMUCSACH(TENDMS) VALUES('$tendms')";
+			$sql = "INSERT INTO danhmucsach(TENDMS) VALUES('$tendms')";
 			return $this->cn->ExecuteQueryInsert($sql);
 		}
 
 		function CapNhatDanhMuc($madms, $tendms)
 		{
-			$sql = "UPDATE DANHMUCSACH SET TENDMS = '$tendms' WHERE MADMS = $madms";
+			$sql = "UPDATE danhmucsach SET TENDMS = '$tendms' WHERE MADMS = $madms";
 			return $this->cn->ExecuteQuery($sql);
 		}
 
 		function XoaDanhMuc($madms)
 		{
-			$sql = "DELETE FROM DANHMUCSACH WHERE MADMS = $madms";
+			$sql = "DELETE FROM danhmucsach WHERE MADMS = $madms";
 			return $this->cn->ExecuteQuery($sql);
 		}
 
