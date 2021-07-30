@@ -4,7 +4,7 @@ class DataProvider
 	private $link;//bien ket noi csdl
 	function __construct()
 	{
-		$this->link=mysqli_connect("localhost","root","","vanhoc");
+		$this->link=mysqli_connect("localhost","root","anhsenpzohp","vanhoc");
 	}
 	function ExecuteQuery($sql)
 	{
