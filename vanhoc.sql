@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2021 at 05:18 AM
+-- Generation Time: Jul 30, 2021 at 05:37 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.10
 
@@ -49,6 +49,14 @@ CREATE TABLE `chitiethoadon` (
   `MAHD` int(11) NOT NULL,
   `SOLUONG` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `chitiethoadon`
+--
+
+INSERT INTO `chitiethoadon` (`MASACH`, `MAHD`, `SOLUONG`) VALUES
+(4, 54, 4),
+(12, 54, 1);
 
 -- --------------------------------------------------------
 
@@ -123,6 +131,13 @@ CREATE TABLE `hoadon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `hoadon`
+--
+
+INSERT INTO `hoadon` (`MAHD`, `MAKH`, `NGAYHD`, `TONGTIEN`, `TENNN`, `DIACHI`, `SDT`, `EMAIL`, `TRANGTHAI`) VALUES
+(54, 20, '2021-07-30', 250000, 'Xuân Tùng', 'Hà Nội 2', '0348889995', 'tungcan2000@gmail.com', 4);
+
+--
 -- Triggers `hoadon`
 --
 DELIMITER $$
@@ -154,7 +169,8 @@ CREATE TABLE `khachhang` (
 
 INSERT INTO `khachhang` (`MAKH`, `TENKH`, `DIACHI`, `SDT`, `EMAIL`, `MATKHAU`, `TENTK`, `NGAYSINH`, `GIOITINH`) VALUES
 (1, 'Khách 1', 'TPHCM', '1234567', 'user@user.com', 'e10adc3949ba59abbe56e057f20f883e', 'user123', '1999-12-24', 1),
-(17, 'Khách 2', 'HN', '03488894334', 'user@user.com', '670b14728ad9902aecba32e22fa4f6bd', 'nguyenvana', '1999-12-01', 1);
+(17, 'Khách 2', 'HN', '03488894334', 'user@user.com', '670b14728ad9902aecba32e22fa4f6bd', 'nguyenvana', '1999-12-01', 1),
+(20, 'Xuân Tùng', 'Hà Nội 2', '0348889995', 'tungcan2000@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'xuantung', '2003-07-16', 0);
 
 --
 -- Triggers `khachhang`
@@ -452,13 +468,13 @@ ALTER TABLE `danhmucsach`
 -- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `MAHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `MAHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `MAKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `MAKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `loaisach`
